@@ -1,0 +1,60 @@
+<div id="banner1">
+    <header >
+        <div class="container">
+            <div class="nav-wrap" style="position: relative;top: 0px;">
+                <div class="logo">
+                    <img src="./image/client-icon/logo.png"/>
+                </div>
+                <div id="menu-bar">
+                    <nav class="nav nav__primary clearfix">
+                        <ul id="topnav" class="sf-menu sf-js-enabled menuItems">
+                            <li class="menu-item"><a routerLink = "/signin" >Sign in</a></li>
+                            
+                            <li *ngFor="let menuItem of menuItems" class="menu-item"
+                            [class.selected]="menuItem === selectedItem">{{menuItem.name}}</li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!--slogan-->
+                <div id="ninja-slider">
+                    <div class="slider-inner">
+                        <ul>
+                            <li  *ngFor="let text of textBanners">
+                                <div class="content">
+                                    <h3>{{text.title}}</h3>
+                                    <p>{{text.content}}</p>
+                                </div>
+                            </li>
+                            <!--<li>
+                                <div class="content">
+                                    <h3>Showcase the important</h3>
+                                    <p>
+                                        Organize, highlight and showcase your most important content in a sleek and stylish manner.
+                                    </p>
+                                </div>
+                            </li>-->
+                            <!--
+                            <li>
+                                <div class="content">
+                                    <h3>Responsive</h3>
+                                    <p>The Content Slider is responsive. The image in this slide is always 30% of the screen size.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3>Mobile Friendly</h3>
+                                    <p>The Carousel is compatible with mobile platforms like iphone/ipad.</p>
+                                </div>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="group-button-left">Search a Job</div>
+                <div class="group-button-right">Search a Job</div>
+            </div>
+        </div>
+    </header>
+</div>
+<router-outlet></router-outlet>
